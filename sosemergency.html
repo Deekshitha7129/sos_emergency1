@@ -35,23 +35,14 @@
 </head>
 
 <body>
-    <button id="callButton" onclick="makeCall()">Call Emergency Contact</button>
+    <a id="callButton" href="tel:+919886025673">Call Emergency Contact</a>
 
     <script>
-        function makeCall() {
-            const emergencyNumber = '+916363101505'; // Replace with the emergency number you want to call
-            const isMobileDevice = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(navigator.userAgent);
-
-            if (isMobileDevice) {
-                window.location.href = `tel:${emergencyNumber}`;
-            } else {
-                alert('This functionality is only available on mobile devices.');
-            }
-        }
+        // Optionally, you can add some JavaScript for additional functionality or logging
+        document.getElementById('callButton').addEventListener('click', function() {
+            console.log('Call button clicked!');
+        });
     </script>
 </body>
 
 </html>
-
-
-
